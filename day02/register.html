@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration Form</title>
+</head>
+<body>
+
+    <h1>User Registration</h1>
+
+    <form action="#" method="POST">
+
+        <div>
+            <label for="userName">Name:</label>
+            <input type="text" id="userName" name="userName">
+        </div>
+        <br>
+
+        <div>
+            <label for="userEmail">Email:</label>
+            <input type="email" id="userEmail" name="userEmail">
+        </div>
+        <br>
+
+        <div>
+            <label for="userPassword">Password:</label>
+            <input type="password" id="userPassword" name="userPassword">
+        </div>
+        <br>
+
+        <div>
+            <label for="userDob">Date of Birth:</label>
+            <input type="date" id="userDob" name="userDob">
+        </div>
+        <br>
+
+        <div>
+            <label for="userAge">Age:</label>
+            <input type="number" id="userAge" name="userAge" min="18" max="100">
+        </div>
+        <br>
+
+        <div>
+            <label for="userSatisfaction">Satisfaction (1-10):</label>
+            <input type="range" id="userSatisfaction" name="userSatisfaction" min="1" max="10">
+        </div>
+        <br>
+
+        <div>
+            <p>Gender:</p>
+            <input type="radio" id="genderMale" name="userGender" value="male">
+            <label for="genderMale">Male</label>
+
+            <input type="radio" id="genderFemale" name="userGender" value="female">
+            <label for="genderFemale">Female</label>
+
+            <input type="radio" id="genderOther" name="userGender" value="other">
+            <label for="genderOther">Other</label>
+        </div>
+        <br>
+
+        <div>
+            <p>Interests:</p>
+            <input type="checkbox" id="interestCoding" name="userInterests" value="coding">
+            <label for="interestCoding">Coding</label>
+
+            <input type="checkbox" id="interestGaming" name="userInterests" value="gaming">
+            <label for="interestGaming">Gaming</label>
+
+            <input type="checkbox" id="interestReading" name="userInterests" value="reading">
+            <label for="interestReading">Reading</label>
+        </div>
+        <br>
+
+        <div>
+            <label for="userCountry">Country:</label>
+            <select id="userCountry" name="userCountry">
+                <option value="kr">South Korea</option>
+                <option value="us">USA</option>
+                <option value="jp">Japan</option>
+                <option value="cn">China</option>
+                <option value="uk">UK</option>
+            </select>
+        </div>
+        <br>
+
+        <div>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+
+    </form>
+    </body>
+</html>

@@ -1,0 +1,111 @@
+/* 전체 설정 및 box-sizing */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 1.2em;
+  margin-top: 0;
+}
+
+/* 박스 모델 및 position 속성 (header) */
+header {
+  padding: 20px;
+  border-bottom: 2px solid #333;
+  margin-bottom: 20px;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 1000;
+}
+
+/* 네비게이션 float 적용 */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden; /* 자식 요소의 float 속성으로 인한 부모 높이 붕괴 방지 (clearfix 효과) */
+}
+
+nav ul li {
+  float: left;
+  margin-right: 20px;
+}
+
+/* 메인 레이아웃 float 적용 (section, aside) */
+section {
+  float: left;
+  width: 70%;
+  margin-bottom: 40px;
+}
+
+aside {
+  float: right;
+  width: 25%;
+  padding: 10px;
+  border-left: 3px solid #007bff;
+  margin: 20px 0; /* 좌우 마진을 주면 70% + 25% + margin으로 인해 영역이 좁아져 줄바꿈이 일어날 수 있으므로 상하만 적용 */
+  position: relative;
+}
+
+aside h3 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+aside ul {
+  margin-top: 40px;
+}
+
+/* 프로젝트 항목 float 레이아웃 (3열) */
+#projects {
+  overflow: hidden; /* 내부 project 항목들의 float을 해제하여 section 영역 높이 유지 */
+}
+
+#projects h2 {
+  width: 100%;
+  clear: both; /* 제목 부분은 float 영향 받지 않도록 처리 */
+}
+
+.project {
+  float: left;
+  width: 30%;
+  margin: 1.66%;
+  padding: 15px;
+  border: 1px solid #ccc;
+}
+
+/* 푸터 clear 속성 적용 */
+footer {
+  clear: both; /* 위쪽 section과 aside의 float 영향을 제거하여 하단에 정상 배치 */
+  margin-top: 40px;
+  padding: 20px;
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+
+footer p:first-of-type {
+  display: none;
+}
