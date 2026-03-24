@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Keyboard Event</title>
+  </head>
+  <body>
+    <input id="text-input" type="text" placeholder="키보드 이벤트 테스트" />
+    <script>
+      // 키보드 이벤트
+      const input = document.getElementById("text-input");
+      input.addEventListener("keydown", function (event) {
+        console.log("keydown 이벤트 발생: " + event.key);
+      });
+      input.addEventListener("keyup", function (event) {
+        console.log("keyup 이벤트 발생: " + event.key);
+      });
+
+      // 마우스 위치 이벤트
+      document.addEventListener("mouseup", function (event) {
+        // console.log(event);
+        console.log(
+          "마우스 위치: (" + event.clientX + ", " + event.clientY + ")",
+        );
+      });
+    </script>
+  </body>
+</html>
